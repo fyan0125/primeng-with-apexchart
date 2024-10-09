@@ -1,8 +1,4 @@
-<div class="mt-5"><p-floatLabel>
-    <p-dropdown id="selectedType" [options]="types" [(ngModel)]="selectedType" />
-    <label for="selectedType">Line Chart</label>
-  </p-floatLabel>
-</div>
+<p-dropdown id="selectedType" [options]="types" [(ngModel)]="selectedType" />
 @switch (selectedType) {
 @case ("Basic") {
 <app-basic></app-basic>

@@ -1,0 +1,12 @@
+<p-carousel [value]="list" [numVisible]="1" [numScroll]="1" verticalViewPortHeight="360px" orientation="vertical">
+  <ng-template let-type pTemplate="item">
+    @switch(type){
+    @case('Simple Pie'){
+    <app-simple-pie></app-simple-pie>
+    }
+    @case('Simple Donut'){
+    <app-simple-donut></app-simple-donut>
+    }
+    }
+  </ng-template>
+</p-carousel>

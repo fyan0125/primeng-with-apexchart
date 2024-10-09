@@ -1,22 +1,31 @@
+<p-toast position="bottom-right" />
 <p-menubar styleClass="border-noround">
   <ng-template pTemplate="end">
     <div class="flex align-items-center gap-2">
       <i class="pi pi-sun"></i>
-      <p-inputSwitch [(ngModel)]="dark" (ngModelChange)="themeService.setDark(dark)" trueValue="dark"
-        falseValue="light" />
+      <p-inputSwitch [(ngModel)]="dark" (ngModelChange)="changeTheme()" trueValue="dark" falseValue="light" />
       <i class="pi pi-moon"></i>
     </div>
   </ng-template>
 </p-menubar>
 
 <div class="grid mx-5 my-2">
-  <div class="col-6">
+  <p-card header="Line Charts" class="col-4">
     <app-line-chart></app-line-chart>
-  </div>
-  <div class="col-6">
-    <app-area-chart></app-area-chart>
-  </div>
-  <div class="col-6">
+  </p-card>
+  <p-card header="Area Charts" class="col-4">
+    <app-area-chart (change)="messageService.add({severity: 'info',detail: '切換時手動重新渲染圖表'})"></app-area-chart>
+  </p-card>
+  <p-card header="Column Charts" class="col-4">
     <app-column-chart></app-column-chart>
-  </div>
+  </p-card>
+  <p-card header="Mixed Charts" class="col-6">
+    <app-mixed-chart></app-mixed-chart>
+  </p-card>
+  <p-card header="Pie Charts" class="col-3">
+    <app-pie-chart></app-pie-chart>
+  </p-card>
+  <p-card header="Radar Charts" class="col-3">
+    <app-radar-chart></app-radar-chart>
+  </p-card>
 </div>

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, output } from '@angular/core';
 
 import { TabViewModule } from 'primeng/tabview';
 
@@ -22,4 +22,5 @@ import { StackedComponent } from './stacked/stacked.component';
 })
 export class AreaChartComponent {
   activeIndex: number = 1;
+  change = output();
 }

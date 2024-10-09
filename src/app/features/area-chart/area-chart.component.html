@@ -1,4 +1,4 @@
-<p-tabView [(activeIndex)]="activeIndex" [scrollable]="true">
+<p-tabView [(activeIndex)]="activeIndex" [scrollable]="true" (onChange)="change.emit()">
   <p-tabPanel header="Area Chart" [disabled]="true"></p-tabPanel>
   <p-tabPanel header="Basic">
     <app-basic [active]="activeIndex === 1"></app-basic>

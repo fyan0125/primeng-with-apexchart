@@ -1,3 +1,34 @@
-<p>
-  column-chart works!
-</p>
+<p-carousel [value]="list" [numVisible]="1" [numScroll]="1">
+  <ng-template let-type pTemplate="item">
+    @switch (type) {
+    @case ('Basic') {
+    <h4>Basic</h4>
+    <app-basic></app-basic>
+    }
+    @case ('Stacked Columns') {
+    <h4>Stacked Columns</h4>
+    <app-stack-columns></app-stack-columns>
+    }
+    @case ('Stacked Columns 100') {
+    <h4>Stacked Columns 100</h4>
+    <app-stacked-columns-100></app-stacked-columns-100>
+    }
+    @case ('Grouped Stacked Columns') {
+    <h4>Grouped Stacked Columns</h4>
+    <app-grouped-stacked-columns></app-grouped-stacked-columns>
+    }
+    @case ('Dumbbell Chart') {
+    <h4>Dumbbell Chart</h4>
+    <app-dumbbell-chart></app-dumbbell-chart>
+    }
+    @case ('Column with Markers') {
+    <h4>Column with Markers</h4>
+    <app-column-with-markers></app-column-with-markers>
+    }
+    @case ('Column with Negative Values') {
+    <h4>Column with Negative Values</h4>
+    <app-column-with-negative-values></app-column-with-negative-values>
+    }
+    }
+  </ng-template>
+</p-carousel>

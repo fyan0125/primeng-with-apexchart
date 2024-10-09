@@ -1,0 +1,9 @@
+<p-dropdown id="selectedType" [options]="types" [(ngModel)]="selectedType" />
+@switch (selectedType) {
+@case ('Multiple Y-Axis') {
+  <app-multiple-y-axis></app-multiple-y-axis>
+}
+@case ('Line Column Area') {
+  <app-line-column-area></app-line-column-area>
+}
+}

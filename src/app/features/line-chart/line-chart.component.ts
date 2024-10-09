@@ -2,7 +2,6 @@ import { Component } from '@angular/core';
 
 import { FormsModule } from '@angular/forms';
 import { DropdownModule } from 'primeng/dropdown';
-import { FloatLabelModule } from 'primeng/floatlabel';
 
 import { BasicComponent } from './basic/basic.component';
 import { ZoomableTimeseriesComponent } from './zoomable-timeseries/zoomable-timeseries.component';
@@ -18,7 +17,6 @@ import { GradientComponent } from './gradient/gradient.component';
   standalone: true,
   imports: [
     FormsModule,
-    FloatLabelModule,
     DropdownModule,
     BasicComponent,
     ZoomableTimeseriesComponent,
