@@ -1,0 +1,22 @@
+<div class="flex gap-2">
+  <p-button size="small" (click)="updateOptions( '1m' )" [class.active]="activeOptionButton=='1m'">
+    1M
+  </p-button>
+  <p-button size="small" (click)="updateOptions( '6m' )" [class.active]="activeOptionButton=='6m'">
+    6M
+  </p-button>
+  <p-button size="small" (click)="updateOptions( '1y' )" [class.active]="activeOptionButton=='1y'">
+    1Y
+  </p-button>
+  <p-button size="small" (click)="updateOptions( '1yd' )" [class.active]="activeOptionButton=='1yd'">
+    1YD
+  </p-button>
+  <p-button size="small" (click)="updateOptions( 'all' )" [class.active]="activeOptionButton=='all'">
+    All
+  </p-button>
+</div>
+
+<apx-chart #chart [series]="chartOptions.series" [chart]="chartOptions.chart" [colors]="chartOptions.colors"
+  [yaxis]="chartOptions.yaxis" [dataLabels]="chartOptions.dataLabels" [markers]="chartOptions.markers"
+  [stroke]="chartOptions.stroke" [xaxis]="chartOptions.xaxis" [tooltip]="chartOptions.tooltip"
+  [annotations]="chartOptions.annotations"></apx-chart>

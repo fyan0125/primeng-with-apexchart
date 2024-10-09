@@ -1,0 +1,22 @@
+<p-menubar styleClass="border-noround">
+  <ng-template pTemplate="end">
+    <div class="flex align-items-center gap-2">
+      <i class="pi pi-sun"></i>
+      <p-inputSwitch [(ngModel)]="dark" (ngModelChange)="themeService.setDark(dark)" trueValue="dark"
+        falseValue="light" />
+      <i class="pi pi-moon"></i>
+    </div>
+  </ng-template>
+</p-menubar>
+
+<div class="grid mx-5 my-2">
+  <div class="col-6">
+    <app-line-chart></app-line-chart>
+  </div>
+  <div class="col-6">
+    <app-area-chart></app-area-chart>
+  </div>
+  <div class="col-6">
+    <app-column-chart></app-column-chart>
+  </div>
+</div>

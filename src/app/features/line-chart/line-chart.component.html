@@ -1,0 +1,25 @@
+<div class="mt-5"><p-floatLabel>
+    <p-dropdown id="selectedType" [options]="types" [(ngModel)]="selectedType" />
+    <label for="selectedType">Line Chart</label>
+  </p-floatLabel>
+</div>
+@switch (selectedType) {
+@case ("Basic") {
+<app-basic></app-basic>
+}
+@case ("Zoomable Timeseries") {
+<app-zoomable-timeseries></app-zoomable-timeseries>
+}
+@case ("Syncing charts") {
+<app-syncing-charts></app-syncing-charts>
+}
+@case ("Brush chart") {
+<app-brush-chart></app-brush-chart>
+}
+@case ("Stepline") {
+<app-stepline></app-stepline>
+}
+@case ("Gradient") {
+<app-gradient></app-gradient>
+}
+}

@@ -1,0 +1,15 @@
+<p-tabView [(activeIndex)]="activeIndex" [scrollable]="true">
+  <p-tabPanel header="Area Chart" [disabled]="true"></p-tabPanel>
+  <p-tabPanel header="Basic">
+    <app-basic [active]="activeIndex === 1"></app-basic>
+  </p-tabPanel>
+  <p-tabPanel header="Spline">
+    <app-spline [active]="activeIndex === 2"></app-spline>
+  </p-tabPanel>
+  <p-tabPanel header="Datetime X-Axis">
+    <app-datetime-x-axis [active]="activeIndex === 3"></app-datetime-x-axis>
+  </p-tabPanel>
+  <p-tabPanel header="Stacked">
+    <app-stacked [active]="activeIndex === 4"></app-stacked>
+  </p-tabPanel>
+</p-tabView>
